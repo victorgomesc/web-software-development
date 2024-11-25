@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Encontros universitarios</h1>
+    <fieldset>
+    <form>
+        <label>Preencha os campos:</label><br><br>
+        <section>
+            <label for="titulo">Digite o titulo do seu trabalho:</label><br>
+            <input type="text" placeholder="Titulo do trabalho" required max="100" id="titulo"><br><br>
+        </section>
+        
+        <section>
+            <label for="resumo">Escreva um breve resumo sobre o trabalho:</label><br>
+            <textarea maxlength="500" required id="resumo" rows="6" cols="40" placeholder="digite seu resumo"></textarea><br><br>
+        </section>
+        
+        <section>
+            <label for="trilha">Trilha de Submissão</label><br>
+
+            <input type="checkbox" value="pesquisa cientifica" id="pesquisa" name="trilha">
+            <label id="pesquisa">Pesquisa cientifica</label><br>
+
+            <input type="checkbox" value="inovacao e tecnologia" id="inovacao" name="trilha">
+            <label id="inovacao">Inovacao e tecnologia</label><br>
+
+            <input type="checkbox" value="extencao universitaria" id="extencao" name="trilha">
+            <label id="extencao">Extenção universitaria</label><br>
+
+            <input type="checkbox" value="emmprendedorismo" id="emmprendedorismo" name="trilha">
+            <label id="emmprendedorismo">Emmprendedorismo</label><br>
+
+            <input type="checkbox" value="arte e cultura" id="arte" name="trilha">
+            <label id="arte">Arte e cultura</label><br><br>
+        </section>
+        
+        <section>
+            <label for="autores">Digite o nome dos auutores</label><br>
+            <input type="text" max="200" placeholder="Nome do autor" required id="autores"><br><br>
+        </section>
+        
+        <section>
+            <label>escolha o orientador:</label><br>
+            <select>
+                <option name="antonio joel" value="antonio joel" id="joel">Antonio Joel</option>
+                <option name="Paulo de tarso" value="paulo de tarso" id="paulo">Paulo de tarso</option>
+                <option name="Andre braga" value="andre braga" id="andre">Andre braga</option>
+            </select><br><br>
+        </section>
+        
+        <section>
+            <label>Links complementares:</label><br>
+            <input type="url" max="200" placeholder="http://wwww.exemplo.com"><br><br>
+        </section>
+        
+        <section>
+            <label for="adicionais">Intruções adicionais sobre o trabalho:</label><br>
+            <textarea maxlength="300" required id="adicionais" rows="6" cols="40" placeholder="digite as informações adicionais"></textarea><br><br>
+        </section>
+        
+        <section>
+            <input type="submit" name="enviar" value="Enviar">
+            <input type="reset" name="Resetar" value="Resetar">
+        </section>
+        
+    </form>
+</fieldset>
+</body>
+</html>

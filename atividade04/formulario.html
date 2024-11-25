@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Torneio de ciclismo</h1>
+    <form>
+        <label>
+            Digite seu nome:
+        </label><br>
+        <input type="text" placeholder="Digite seu nome" /><br><br>
+        <label>
+            Digite sua data de nascimento:
+        </label><br>
+        <input type="date"><br><br>
+        <label>Modalidade:</label><br>
+        <input type="radio" id="1" name="modalidade" value="moutain bike">
+        <label for="1">Moutain Bike</label>
+        <input type="radio" id="2" name="modalidade" value="Ciclismo de estrada">
+        <label for="2">Ciclismo de estrada</label>
+        <br><br>
+
+        <label>Experiencia:</label><br>
+
+        <input type="radio" id="iniciante" name="experiencia" value="iniciante">
+        <label for="iniciante">Iniciante</label>
+
+        <input type="radio" id="entermediario" name="experiencia" value="intermediario">
+        <label for="intermediario">Interediario</label>
+
+
+        <input type="radio" id="avancado" name="experiencia" value="avancado">
+        <label for="avancado">Avancado</label>
+
+        <br><br>
+
+        <label>Interese em alimentação:</label><br>
+        <input type="checkbox" name="agua" id="agua" value="agua">
+        <label for="agua">agua</label><br>
+
+        <input type="checkbox" name="lanche" id="lanche" value="lanche">
+        <label for="lanche">Lanche rapido</label><br>
+
+        <input type="checkbox" name="reforcado" id="reforcado" value="reforcado">
+        <label for="reforcado">Lanche reforçado</label><br>
+
+        <input type="checkbox" name="cola" id="cola" value="cola">
+        <label for="cola">Coca Cola sem açucar</label><br>
+
+        <input type="checkbox" name="barra" id="barra" value="barra">
+        <label for="barra">Barra proteica</label><br><br>
+
+        <label>Aceite os termos:</label><br>
+        <input type="checkbox" name="comfirmar" id="comfirmar" required value="comfirmado">
+        <label for="comfirmar">Li e concordo com os termos!</label><br><br>
+
+        <input type="submit" name="enviar" id="enviar" value="Enviar">
+    </form>
+</body>
+</html>
