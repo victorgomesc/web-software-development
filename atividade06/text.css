@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+    .container {
+    background-color: #f7dcf3;
+}
+    #titulo {
+    color: #333;
+}
+
+.conteudo {
+color: #ff5733;
+}
+
+.paragrafo {
+color: #3d0bf2;
+}
+
+.paragrafo2 {
+    color: #ff5733;;
+}
