@@ -1,0 +1,67 @@
+body {
+    background-image: url('image1.jpg');
+    justify-items: center;
+    flex-direction: column;
+}
+
+.title {
+    color: white;
+}
+
+ .container {
+    justify-items: left;
+    flex-direction: column;
+    display: flex;
+    word-break: normal;
+    background-color: rgb(4, 4, 77);
+    color: white;
+    border-radius: 10px;
+    width: auto;
+ }
+
+ .container1 {
+    flex-direction: column;
+    display: flex;
+    width: auto;
+    margin: 20px;
+    font-size: larger;
+    padding-bottom: 10px;
+    gap: 4px;
+    font-weight: bold;
+ }
+
+ .input {
+    border-radius: 10px;
+    font-size: large;
+    height: 35px;
+ }
+ 
+ .select {
+    border-radius: 10px;
+    font-size: large;
+    height: 35px;
+ }
+
+ .enviar {
+    flex-direction: column;
+    display: flex;
+    width: auto;
+    font-size: larger;
+    padding-bottom: 10px;
+    gap: 6px;
+    background-color: green;
+    border-radius: 20px;
+    justify-items: center;
+ }
+
+ .enviar:hover {
+    background-color: blue;
+ }
+
+ .items {
+    margin-top: 6px
+ }
+ 
+ .celula {
+    margin-top: 6px;
+ }
