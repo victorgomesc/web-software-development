@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gerenciamento de Servidores</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Sistema de Gerenciamento de Servidores</h1>
+            <p>Gerencie seus servidores de forma eficiente e organizada</p>
+        </div>
+    </section>
+
+    <!-- Área de Busca -->
+    <section class="search-section">
+        <div class="search-container">
+            <input type="text" id="searchName" placeholder="Buscar por nome">
+            <input type="text" id="searchPosition" placeholder="Buscar por cargo">
+            <input type="text" id="searchCode" placeholder="Buscar por código">
+            <input type="number" id="searchSalary" placeholder="Buscar por salário">
+            <button onclick="searchServers()">Buscar</button>
+        </div>
+    </section>
+
+    <!-- Formulário de Cadastro -->
+    <section class="form-section">
+        <h2>Cadastrar Novo Servidor</h2>
+        <form id="serverForm">
+            <input type="text" id="name" placeholder="Nome" required>
+            <input type="text" id="position" placeholder="Cargo" required>
+            <input type="text" id="code" placeholder="Código" required>
+            <input type="number" id="salary" placeholder="Salário" required>
+            <button type="submit">Cadastrar</button>
+        </form>
+    </section>
+
+    <!-- Tabela de Servidores -->
+    <section class="table-section">
+        <table id="serversTable">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Cargo</th>
+                    <th>Código</th>
+                    <th>Salário</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="serversTableBody">
+            </tbody>
+        </table>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html> 
