@@ -9,13 +9,13 @@ public static class FuncionarioRoute {
     {
         var route = app.MapGroup("funcionario");
 
-        route.MapPost("", async FuncionarioRequest req, FuncionarioContext context ) => 
+        route.MapPost("", async (FuncionarioRequest req, FuncionarioContext context) => 
         {
-        var funcionario = new FuncionarioModel(req.name, req.cargo, req.cpf, req.salario);
-        await context.AddAsync(funcionario);
-        await context.SaveChangesAsync();
-    
-        return Results.Created($"/funcionario/{funcionario.Id}", funcionario); 
+            var funcionario = new FuncionarioModel(req.name, req.cargo, req.cpf, req.salario);
+            await context.AddAsync(funcionario);
+            await context.SaveChangesAsync();
+
+            return Results.Created($"/funcionario/{funcionario.Id}", funcionario); 
         });
 
         route.MapGet("", async (FuncionarioContext context) => 
@@ -33,15 +33,10 @@ public static class FuncionarioRoute {
             }
 
             funcionario.ChangeName(req.name);
-            await context.SaveChangesAsync(); 
-
             funcionario.ChangeCargo(req.cargo);
-            await context.SaveChangesAsync();
-
             funcionario.ChangeCpf(req.cpf);
-            await context.SaveChangesAsync();
-
             funcionario.ChangeSalario(req.salario);
+            
             await context.SaveChangesAsync();
 
             return Results.Ok(funcionario);
@@ -49,15 +44,13 @@ public static class FuncionarioRoute {
 
         route.MapDelete("{id:guid}", async (Guid id, FuncionarioContext context) => 
         {
-            var task = await context.Task.FirstOrDefaultAsync(x => x.Id == id);
+            var funcionario = await context.Funcionario.FirstOrDefaultAsync(x => x.Id == id);
 
-            if (task == null){
+            if (funcionario == null){
                 return Results.NotFound();
             }
 
-            await Task.Delay(2000);
-
-            context.Task.Remove(task);
+            context.Funcionario.Remove(funcionario);
             await context.SaveChangesAsync();
 
             return Results.NoContent();
